@@ -2,8 +2,6 @@
 
 import os, requests
 fields = ['name', 'weight', 'description', 'image_name']
-path = os.path.expanduser('~')
-path = os.path.join(path, 'supplier-data', 'images')
 
 os.chdir('./supplier-data/descriptions')
 for txt in os.listdir():
@@ -13,7 +11,9 @@ for txt in os.listdir():
     with open(txt, 'r') as f:
         data=f.readlines()
     data[1] = int(data[1].split(' ')[0])
-    d = {fields[3]:os.path.join(path, txt.split('.')[0]+'.jpeg')}
+    img_name = txt.replace('.txt', '.jpeg')
+    print(img_name)
+    d = {fields[3]:img_name}
     for i in range(len(data)):
         d[fields[i]]=data[i]
 #    print(d)
