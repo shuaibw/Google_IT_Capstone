@@ -14,8 +14,9 @@ for txt in os.listdir():
     img_name = txt.replace('.txt', '.jpeg')
     print(img_name)
     d = {fields[3]:img_name}
-    for i in range(len(data)):
-        d[fields[i]]=data[i]
-#    print(d)
-    r=requests.post('http://localhost/fruits/', data=d)
-    print(r)
+    d[fields[0]] = data[0]
+    d[fields[1]] = data[1]
+    d[fields[2]] = data[2]
+    print(d)
+#    r=requests.post('http://localhost/fruits/', data=d)
+#    print(r)
