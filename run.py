@@ -17,6 +17,6 @@ for txt in os.listdir():
     d[fields[0]] = data[0]
     d[fields[1]] = data[1]
     d[fields[2]] = data[2]
-    print(d)
-#    r=requests.post('http://localhost/fruits/', data=d)
-#    print(r)
+#    print(d)
+    r=requests.post('http://localhost/fruits/', data=d)
+    print(r)
