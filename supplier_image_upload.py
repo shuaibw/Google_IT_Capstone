@@ -3,7 +3,7 @@
 import requests
 import os
 
-url = "http://34.122.55.134/upload/"
+url = "http://localhost/upload/"
 os.chdir('./supplier-data/images')
 path = "/home/student-03-eb849f6866c3/supplier-data/images"
 
